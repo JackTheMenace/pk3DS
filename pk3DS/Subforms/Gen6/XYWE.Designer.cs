@@ -276,6 +276,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.TabPage_Horde = new System.Windows.Forms.TabPage();
             this.GB_Tweak = new System.Windows.Forms.GroupBox();
+            this.CHK_MegaForm = new System.Windows.Forms.CheckBox();
             this.L_RandOpt = new System.Windows.Forms.Label();
             this.CHK_BST = new System.Windows.Forms.CheckBox();
             this.CHK_E = new System.Windows.Forms.CheckBox();
@@ -561,7 +562,7 @@
             this.CB_FormeList = new System.Windows.Forms.ComboBox();
             this.B_Randomize = new System.Windows.Forms.Button();
             this.B_Dump = new System.Windows.Forms.Button();
-            this.CHK_MegaForm = new System.Windows.Forms.CheckBox();
+            this.CHK_HomogeneousHordes = new System.Windows.Forms.CheckBox();
             this.TabControl_EncounterData.SuspendLayout();
             this.TabPage_Land.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_RockSmashMax5)).BeginInit();
@@ -5082,9 +5083,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(44, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 310;
-            this.label2.Text = "Grass";
+            this.label2.Text = "Tall Grass";
             // 
             // NUP_GrassMax2
             // 
@@ -15506,6 +15507,7 @@
             // 
             // GB_Tweak
             // 
+            this.GB_Tweak.Controls.Add(this.CHK_HomogeneousHordes);
             this.GB_Tweak.Controls.Add(this.CHK_MegaForm);
             this.GB_Tweak.Controls.Add(this.L_RandOpt);
             this.GB_Tweak.Controls.Add(this.CHK_BST);
@@ -15526,6 +15528,16 @@
             this.GB_Tweak.TabIndex = 323;
             this.GB_Tweak.TabStop = false;
             this.GB_Tweak.Text = "Extra Tweaks";
+            // 
+            // CHK_MegaForm
+            // 
+            this.CHK_MegaForm.AutoSize = true;
+            this.CHK_MegaForm.Location = new System.Drawing.Point(152, 97);
+            this.CHK_MegaForm.Name = "CHK_MegaForm";
+            this.CHK_MegaForm.Size = new System.Drawing.Size(127, 17);
+            this.CHK_MegaForm.TabIndex = 296;
+            this.CHK_MegaForm.Text = "Random Mega Forms";
+            this.CHK_MegaForm.UseVisualStyleBackColor = true;
             // 
             // L_RandOpt
             // 
@@ -15648,35 +15660,46 @@
             this.B_LevelPlus.Name = "B_LevelPlus";
             this.B_LevelPlus.Size = new System.Drawing.Size(70, 23);
             this.B_LevelPlus.TabIndex = 277;
-            this.B_LevelPlus.Text = "+/- Current";
+            this.B_LevelPlus.Text = "× Current";
             this.B_LevelPlus.UseVisualStyleBackColor = true;
             this.B_LevelPlus.Click += new System.EventHandler(this.modifyLevels);
             // 
             // NUD_LevelAmp
             // 
+            this.NUD_LevelAmp.DecimalPlaces = 2;
+            this.NUD_LevelAmp.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
             this.NUD_LevelAmp.Location = new System.Drawing.Point(152, 16);
+            this.NUD_LevelAmp.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.NUD_LevelAmp.Minimum = new decimal(new int[] {
-            75,
+            1,
             0,
             0,
-            -2147483648});
+            65536});
             this.NUD_LevelAmp.Name = "NUD_LevelAmp";
             this.NUD_LevelAmp.Size = new System.Drawing.Size(41, 20);
             this.NUD_LevelAmp.TabIndex = 276;
             this.NUD_LevelAmp.Value = new decimal(new int[] {
-            50,
+            10,
             0,
             0,
-            0});
+            65536});
             // 
             // CHK_Level
             // 
             this.CHK_Level.AutoSize = true;
-            this.CHK_Level.Location = new System.Drawing.Point(33, 17);
+            this.CHK_Level.Location = new System.Drawing.Point(18, 17);
             this.CHK_Level.Name = "CHK_Level";
-            this.CHK_Level.Size = new System.Drawing.Size(122, 17);
+            this.CHK_Level.Size = new System.Drawing.Size(135, 17);
             this.CHK_Level.TabIndex = 279;
-            this.CHK_Level.Text = "Modify All Levels (%)";
+            this.CHK_Level.Text = "Multiply PKM Levels by";
             this.CHK_Level.UseVisualStyleBackColor = true;
             // 
             // label129
@@ -27895,21 +27918,21 @@
             this.B_Dump.UseVisualStyleBackColor = true;
             this.B_Dump.Click += new System.EventHandler(this.B_Dump_Click);
             // 
-            // CHK_MegaForm
+            // CHK_HomogeneousHordes
             // 
-            this.CHK_MegaForm.AutoSize = true;
-            this.CHK_MegaForm.Location = new System.Drawing.Point(152, 97);
-            this.CHK_MegaForm.Name = "CHK_MegaForm";
-            this.CHK_MegaForm.Size = new System.Drawing.Size(127, 17);
-            this.CHK_MegaForm.TabIndex = 296;
-            this.CHK_MegaForm.Text = "Random Mega Forms";
-            this.CHK_MegaForm.UseVisualStyleBackColor = true;
+            this.CHK_HomogeneousHordes.AutoSize = true;
+            this.CHK_HomogeneousHordes.Location = new System.Drawing.Point(18, 97);
+            this.CHK_HomogeneousHordes.Name = "CHK_HomogeneousHordes";
+            this.CHK_HomogeneousHordes.Size = new System.Drawing.Size(133, 17);
+            this.CHK_HomogeneousHordes.TabIndex = 297;
+            this.CHK_HomogeneousHordes.Text = "Single Species Hordes";
+            this.CHK_HomogeneousHordes.UseVisualStyleBackColor = true;
             // 
             // XYWE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 416);
+            this.ClientSize = new System.Drawing.Size(948, 415);
             this.Controls.Add(this.B_Dump);
             this.Controls.Add(this.B_Randomize);
             this.Controls.Add(this.label136);
@@ -28759,6 +28782,7 @@
         private System.Windows.Forms.NumericUpDown NUD_LevelAmp;
         private System.Windows.Forms.CheckBox CHK_Level;
         private System.Windows.Forms.CheckBox CHK_MegaForm;
+        private System.Windows.Forms.CheckBox CHK_HomogeneousHordes;
     }
 }
 
